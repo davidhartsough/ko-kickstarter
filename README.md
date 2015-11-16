@@ -7,6 +7,9 @@ Less is More is designed to help developers get started creating fast using the 
 
 For me, Less is More is merely a launching pad I like to start from, and adding to the build tool is straightforward. I've been dogfooding this for awhile now, so I hope you find this helpful too.
 
+###### Installation
+Don't forget to `npm install` for the devdependencies.
+
 ### Scripts
 **Warning: some scripts are written for Unix-like systems only and may not work on Windows**
 ##### Lint
@@ -36,14 +39,14 @@ Use `npm run build` to minify your files and create a final distribution in the 
 
 #### index.html
 | line numbers | what to change | example |
-| ---- | ---- | ---- |
+| -------- | -------- | -------- |
 | 3 | SCHEMA | WebPage |
 | 8, 14, 15, 20, 28, 33, 35 | TITLE | Google |
 | 9, 16, 27 | DESCRIPTION | Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for. |
 | 10 | KEYWORD | search |
-| 11 | AUTHOR | David Hartsough |
+| 11 | AUTHOR | George Washington |
 | 12, 18, 21, 22, 23 | URL | google |
-| 17 | @CREATOR | @NASA |
+| 17 | @CREATOR | @GeorgeWashington |
 | 21 | TYPE | website |
 | 29 | 000000000 | 123456789 |
 | 36, 43, 48, 49 | #000000 | #4285F4 |
@@ -52,33 +55,27 @@ Use `npm run build` to minify your files and create a final distribution in the 
 #### humans.txt
 | line number | what to change | example |
 | ---- | ---- | ---- |
-| 6 | <name> | David Hartsough |
-| 6 | <role> | Developer |
-| 6 | <twitter> | @google |
-| 10 | <name> | David |
+| 6 | `<name>` | George Washington |
+| 6 | `<role>` | Developer |
+| 6 | `<twitter>` | @GeorgeWashington |
+| 10 | `<name>` | George |
 
 #### manifest.json
 | line number | what to change | example |
 | ---- | ---- | ---- |
-| 2 | <name> | Super Racer 2000 |
-| 3 | <shortname> | Racer2K |
+| 2 | `<name>` | George Washington |
+| 3 | `<shortname>` | GW |
 
 #### manifest.webapp
 | line numbers | what to change | example |
 | ---- | ---- | ---- |
-| 3, 21 | <name> | Super Racer 2000 |
-| 5, 22 | <description> | Awesome and exciting racing web app! |
-| 10 | <name> | David Hartsough |
-| 11 | <url> | http://davidhartsough.com/ |
+| 3, 21 | `<name>` | Google |
+| 5, 22 | `<description>` | Search the world's information, including webpages, images, videos and more. Google has many special features to help you find exactly what you're looking for. |
+| 10 | `<name>` | George Washington |
+| 11 | `<url>` | http://georgewashington.com/ |
 
 #### .eslintrc
 Change lint rules as you see fit.
-
-#### assets/scripts/main.js
-Remove the console log.
-
-#### assets/styles/main.css
-Choose your own font, if you'd like.
 
 #### images
 **Images you'll need to replace:**
@@ -90,8 +87,8 @@ Choose your own font, if you'd like.
 - logo.png (1200x630)
 
 ./more/assets/images/touch/
-- icon-512x512.png
-- icon-128x128.png
+- icon-512x512.png (512x512)
+- icon-128x128.png (128x128)
 - chrome-touch-icon-192x192.png
 - apple-touch-icon.png (152x152)
 - touch-icon-iphone.png (180x180)
@@ -99,7 +96,7 @@ Choose your own font, if you'd like.
 - touch-icon-iphone-retina.png (120x120)
 - touch-icon-ipad-retina.png (152x152)
 - startup.png (320x480)
-- ms-touch-icon-144x144-precomposed.png
+- ms-touch-icon-144x144-precomposed.png (144x144)
 - icon_smalltile.png (70x70)
 - icon_mediumtile.png (150x150)
 - icon_widetile.png (310x150)
