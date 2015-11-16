@@ -1,0 +1,65 @@
+{
+  "name": "less-is-more",
+  "version": "1.0.0",
+  "description": "Less is More is a simple build tool that can lint, minify, and serve.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint ./more/assets/scripts/ --ext .js",
+    "clean": "rm -r ./less/*",
+    "postclean": "mkdir ./less/assets",
+    "copy": "rsync -r ./more/* ./less --exclude index.html --exclude assets/scripts/ --exclude assets/styles/",
+    "postcopy": "mkdir ./less/assets/scripts && mkdir ./less/assets/styles",
+    "presetup": "npm run clean",
+    "setup": "npm run copy",
+    "preminify:js": "cat ./more/assets/scripts/*.js > ./less/assets/scripts/main.js",
+    "minify:js": "uglifyjs ./less/assets/scripts/main.js -c -m -o ./less/assets/scripts/main.js",
+    "postminify:js": "echo the JS has been minified",
+    "autoprefix": "postcss --use autoprefixer -o ./more/assets/styles/main.css ./more/assets/styles/main.css",
+    "minify:css": "cleancss -o ./less/assets/styles/main.css ./less/assets/styles/main.css",
+    "postminify:css": "echo the CSS has been minified",
+    "bundle:css": "cat ./more/assets/styles/*.css > ./less/assets/styles/main.css",
+    "prebuild:css": "npm run bundle:css",
+    "build:css": "npm run autoprefix",
+    "postbuild:css": "npm run minify:css",
+    "minify:html": "html-minifier -o ./less/index.html --lint --remove-comments --collapse-whitespace --remove-attribute-quotes --remove-optional-tags ./more/index.html",
+    "prebuild": "npm run setup",
+    "build": "npm run minify:js & npm run build:css & npm run minify:html",
+    "postbuild": "open less/index.html",
+    "dev": "live-server --port=8080 --open=./more/ --wait=1000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/davidhartsough/less-is-more.git"
+  },
+  "keywords": [
+    "less",
+    "more",
+    "simple",
+    "build",
+    "tool",
+    "web",
+    "dev",
+    "lint",
+    "minify",
+    "serve",
+    "html",
+    "css",
+    "js"
+  ],
+  "author": "David Hartsough",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidhartsough/less-is-more/issues"
+  },
+  "homepage": "https://github.com/davidhartsough/less-is-more",
+  "devDependencies": {
+    "autoprefixer": "^6.1.0",
+    "clean-css": "^3.4.8",
+    "eslint": "^1.9.0",
+    "html-minifier": "^1.0.0",
+    "live-server": "^0.8.2",
+    "postcss-cli": "^2.3.2",
+    "uglify-js": "^2.6.0"
+  }
+}
