@@ -15,9 +15,9 @@ Don't forget to `npm install` for the devdependencies.
 ##### Lint
 Use `npm run lint` to lint js files in `more/assets/scripts`
 ##### Live Server
-Use `npm run dev` to serve up files from the "more" directory in your browser on port 8080 (http://localhost:8080)
+Use `npm run serve:more` to serve up files from the "more" directory in your browser on port 8080 (http://localhost:8080)
 ##### Distribute
-Use `npm run build` to minify your files and create a final distribution in the "less" directory. This also opens `less/index.html` in your browser.
+Use `npm run dist` to minify your files and create a final distribution in the "less" directory. This also spins up a server from the "less" directory and opens it in your browser.
 
 ### Devdependencies
 **For CSS related scripts**
