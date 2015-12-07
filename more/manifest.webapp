@@ -4,8 +4,13 @@
   "launch_path": "/index.html",
   "description": "<description>.",
   "icons": {
-    "128": "/images/touch/icon-128x128.png",
-    "512": "/images/touch/icon-512x512.png"
+    "16": "assets/images/touch/favicon/favicon-16x16.png",
+    "32": "assets/images/touch/favicon/favicon-32x32.png",
+    "48": "assets/images/touch/android/android-chrome-48x48.png",
+    "96": "assets/images/touch/favicon/favicon-96x96.png",
+    "128": "assets/images/touch/firefox/icon-128x128.png",
+    "192": "assets/images/touch/android/android-chrome-192x192.png",
+    "512": "assets/images/touch/firefox/icon-512x512.png"
   },
   "developer": {
     "name": "<name>",

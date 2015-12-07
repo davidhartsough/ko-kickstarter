@@ -74,11 +74,16 @@ Use `npm run dist` to minify your files and create a final distribution in the "
 | 10 | `<name>` | George Washington |
 | 11 | `<url>` | http://georgewashington.com/ |
 
+#### browserconfig.xml
+Change the hex color on line 9 from #000000 to your theme color (example: #42A5F5).
+
 #### .eslintrc
 Change lint rules as you see fit.
 
 #### images
 **Images you'll need to replace:**
+
+Side note: the [real favicon generator](http://realfavicongenerator.net/) is super helpful for creating these files.
 
 ./more/
 - favicon.ico
@@ -86,20 +91,41 @@ Change lint rules as you see fit.
 ./more/assets/images/
 - logo.png (1200x630)
 
-./more/assets/images/touch/
-- icon-512x512.png (512x512)
-- icon-128x128.png (128x128)
-- chrome-touch-icon-192x192.png
-- apple-touch-icon.png (152x152)
-- touch-icon-iphone.png (180x180)
-- touch-icon-ipad.png (76x76)
-- touch-icon-iphone-retina.png (120x120)
-- touch-icon-ipad-retina.png (152x152)
+./more/assets/images/touch/android/
+- android-chrome-36x36.png (36)
+- android-chrome-48x48.png (48)
+- android-chrome-72x72.png (72)
+- android-chrome-96x96.png (96)
+- android-chrome-144x144.png (144)
+- android-chrome-192x192.png (192)
+
+./more/assets/images/touch/apple/
+- apple-touch-icon-57x57.png (57)
+- apple-touch-icon-60x60.png (60)
+- apple-touch-icon-72x72.png (72)
+- apple-touch-icon-76x76.png (76)
+- apple-touch-icon-114x114.png (114)
+- apple-touch-icon-120x120.png (120)
+- apple-touch-icon-144x144.png (144)
+- apple-touch-icon-152x152.png (152)
+- apple-touch-icon-180x180.png (180)
+- apple-touch-icon.png (180)
 - startup.png (320x480)
-- ms-touch-icon-144x144-precomposed.png (144x144)
-- icon_smalltile.png (70x70)
-- icon_mediumtile.png (150x150)
-- icon_widetile.png (310x150)
-- icon_largetile.png (310x310)
+
+./more/assets/images/touch/favicon/
+- favicon-16x16.png (16)
+- favicon-32x32.png (32)
+
+./more/assets/images/touch/firefox
+- icon-128x128.png (128)
+- icon-152x152.png (152)
+- icon-512x512.png (512)
+
+./more/assets/images/touch/ms/
+- mstile-70x70.png (128)
+- mstile-144x144.png (144)
+- mstile-150x150.png (270)
+- mstile-310x310.png (558)
+- mstile-310x150.png (558x270)
 
 ### Happy Developing :)
