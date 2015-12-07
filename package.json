@@ -23,10 +23,13 @@
     "build:css": "npm run autoprefix",
     "postbuild:css": "npm run minify:css",
     "minify:html": "html-minifier -o ./less/index.html --lint --remove-comments --collapse-whitespace --remove-attribute-quotes --remove-optional-tags ./more/index.html",
-    "prebuild": "npm run setup",
-    "build": "npm run minify:js & npm run build:css & npm run minify:html",
-    "postbuild": "open less/index.html",
-    "dev": "live-server --port=8080 --open=./more/ --wait=1000"
+    "predist": "npm run setup",
+    "dist": "npm run minify:js & npm run build:css & npm run minify:html",
+    "postdist": "npm run serve:less",
+    "serve:less": "live-server --port=8080 --open=./less/ --wait=1000",
+    "serve:more": "live-server --port=8080 --open=./more/ --wait=1000",
+    "open:less": "open less/index.html",
+    "open:more": "open more/index.html"
   },
   "repository": {
     "type": "git",
