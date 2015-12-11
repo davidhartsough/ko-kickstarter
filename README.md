@@ -1,6 +1,8 @@
 # Less is More
 https://github.com/davidhartsough/less-is-more.git
 
+![Less is More](http://davidhartsough.com/assets/images/projects/lessismore.png)
+
 Less is More is a simple build tool that can lint, minify, and serve.
 
 Less is More is designed to help developers get started creating fast using the bare bones basics: raw HTML, CSS, and JS. The index.html file has probably every tag you need in `<head>` for great SEO practices. There's also a `manifest.json` and a `manifest.webapp` along with other boilerplate files to boot. Keeping with the Less is More theme, this build tool just uses npm scripts -- no Grunt or Gulp bloat. You only need to remember 3 CLI commands. The build system is centered around a single page web app, but Less is More is simple and flexible enough for you to easily make adjustments to accomodate for a more diverse file structure in a multi-page site.
