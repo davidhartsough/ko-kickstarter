@@ -1,7 +1,7 @@
 # Less is More
 https://github.com/davidhartsough/less-is-more.git
 
-![Less is More](http://davidhartsough.com/assets/images/projects/lessismore.png)
+<img src="http://davidhartsough.com/assets/images/projects/lessismore.png" alt="Less is More" width="150" />
 
 Less is More is a simple build tool that can lint, minify, and serve.
 
