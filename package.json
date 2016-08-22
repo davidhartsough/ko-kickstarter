@@ -21,8 +21,7 @@
     "serve:less": "live-server --open=./less/ --wait=1000",
     "serve:more": "live-server --open=./more/ --wait=1000",
     "open:less": "open less/index.html",
-    "open:more": "open more/index.html",
-    "html:help": "html-minifier --help"
+    "open:more": "open more/index.html"
   },
   "repository": {
     "type": "git",
