@@ -4,9 +4,10 @@ https://github.com/davidhartsough/ko-kickstarter.git
 Kickoff a great Knockout, Browserify, and Director web app.
 
 KO Kickstarter does 3 awesome things for you:
-1) Sets up a structure for your app to be written with modular code.
-2) Serves your files with a live reload that actively watches for any changes you make. 
-3) Distrubutes a minified build when you're ready to launch.
+
+1. Sets up a structure for your app to be written with modular code.
+2. Serves your files with a live reload that actively watches for any changes you make.
+3. Distrubutes a minified build when you're ready to launch.
 
 **Note:**
 This is a fork of the [Simple Less is More](https://github.com/davidhartsough/simple-less-is-more.git) build tool (which is a fork of the [Less is More](https://github.com/davidhartsough/less-is-more.git) build tool).
@@ -85,7 +86,7 @@ Most of your work will be happening in /more/ui/ (and some in /more/index.html)
 
 #### index.html
 * Primary view and layout for your app
-* SEO jargon in <head>
+* SEO jargon in `<head>`
 
 #### app.css
 * Styles you want to be applied globally
