@@ -3,11 +3,11 @@ var ko			= require('knockout'),
 	director	= require('director');
 
 // Page layouts
-ko.components.register('hello-world',	require('../../ui/layouts/hello-world/hello-world.js'));
-ko.components.register('my-page',		require('../../ui/layouts/my-page/my-page.js'));
+ko.components.register('hello-world',	require('./layouts/hello-world/hello-world.js'));
+ko.components.register('my-page',		require('./layouts/my-page/my-page.js'));
 
 // Components
-ko.components.register('my-component',	require('../../ui/components/my-component/my-component.js'));
+ko.components.register('my-component',	require('./components/my-component/my-component.js'));
 
 var ViewModel = function() {
 	var self = this;
@@ -55,8 +55,8 @@ router.init();
 
 ko.applyBindings(viewModel);
 
-},{"../../ui/components/my-component/my-component.js":3,"../../ui/layouts/hello-world/hello-world.js":5,"../../ui/layouts/my-page/my-page.js":7,"director":8,"knockout":9}],2:[function(require,module,exports){
-module.exports = "<li>\n\t<p data-bind=\"text: givenValue\"></p>\n</li>";
+},{"./components/my-component/my-component.js":3,"./layouts/hello-world/hello-world.js":5,"./layouts/my-page/my-page.js":7,"director":8,"knockout":9}],2:[function(require,module,exports){
+module.exports = "<li>\n\t<p class=\"item-text\" data-bind=\"text: givenValue\"></p>\n</li>";
 
 },{}],3:[function(require,module,exports){
 var ko = require('knockout'),
@@ -72,7 +72,7 @@ module.exports = {
 };
 
 },{"./my-component.html":2,"knockout":9}],4:[function(require,module,exports){
-module.exports = "<p>First name: <input data-bind=\"value: firstName\" /></p>\n<p>Last name: <input data-bind=\"value: lastName\" /></p>\n<h2>Hello, <span data-bind=\"text: fullName\"> </span>!</h2>";
+module.exports = "<p>First name: <input data-bind=\"value: firstName\" /></p>\n<p>Last name: <input data-bind=\"value: lastName\" /></p>\n<h2>Hello, <span class=\"full-name\" data-bind=\"text: fullName\"> </span>!</h2>";
 
 },{}],5:[function(require,module,exports){
 var ko = require('knockout'),
@@ -93,7 +93,7 @@ module.exports = {
 };
 
 },{"./hello-world.html":4,"knockout":9}],6:[function(require,module,exports){
-module.exports = "<h2 data-bind=\"text: pageTitle\"></h2>\n<ul data-bind=\"foreach: items\">\n\t<my-component params=\"myValue: $data\"></my-component>\n</ul>";
+module.exports = "<h2 class=\"page-title\" data-bind=\"text: pageTitle\"></h2>\n<ul class=\"items-list\" data-bind=\"foreach: items\">\n\t<my-component params=\"myValue: $data\"></my-component>\n</ul>";
 
 },{}],7:[function(require,module,exports){
 var ko = require('knockout'),

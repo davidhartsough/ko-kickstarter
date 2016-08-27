@@ -2,11 +2,11 @@ var ko			= require('knockout'),
 	director	= require('director');
 
 // Page layouts
-ko.components.register('hello-world',	require('../../ui/layouts/hello-world/hello-world.js'));
-ko.components.register('my-page',		require('../../ui/layouts/my-page/my-page.js'));
+ko.components.register('hello-world',	require('./layouts/hello-world/hello-world.js'));
+ko.components.register('my-page',		require('./layouts/my-page/my-page.js'));
 
 // Components
-ko.components.register('my-component',	require('../../ui/components/my-component/my-component.js'));
+ko.components.register('my-component',	require('./components/my-component/my-component.js'));
 
 var ViewModel = function() {
 	var self = this;
