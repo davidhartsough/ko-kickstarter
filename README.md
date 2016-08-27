@@ -31,12 +31,12 @@ Reference these for extra details.
 
 ```
 ├── ko-kickstarter/
-│   ├── package.json               // Reference for npm scripts
-│   ├── README.md                  // This document
-│   ├── more/                       // Where you'll develop
-│   │   ├── index.html 				// Entry point for your app
-│   │   ├── bundle.css 				// Un-minified compilation of styles
-│   │   ├── bundle.js 				// Un-minified compilation of scripts
+│   ├── package.json            // Reference for npm scripts
+│   ├── README.md               // This document
+│   ├── more/                   // Where you'll develop
+│   │   ├── index.html          // Entry point for your app
+│   │   ├── bundle.css          // Un-minified compilation of styles
+│   │   ├── bundle.js           // Un-minified compilation of scripts
 │   │   ├── favicon.ico
 │   │   ├── robots.txt
 │   │   ├── humans.txt
@@ -46,28 +46,28 @@ Reference these for extra details.
 │   │   ├── assets/
 │   │   │   ├── images/
 │   │   │   │   ├── ... etc
-│   │   ├── ui/						// Modules that compile into bundle.css and bundle.js
-│   │   │   ├── app.css 			// The main, basic, global css for your app
-│   │   │   ├── app.js 				// The main js for your app (details below)
-│   │   │   ├── components/			// Reusable component modules used in layouts
-│   │   │   │   ├── my-component/	// Example component used in "my-page" layout
+│   │   ├── ui/                      // Modules that compile into bundle.css and bundle.js
+│   │   │   ├── app.css              // The main, basic, global css for your app
+│   │   │   ├── app.js               // The main js for your app (details below)
+│   │   │   ├── components/          // Reusable component modules used in layouts
+│   │   │   │   ├── my-component/    // Example component used in "my-page" layout
 │   │   │   │   │   ├── my-component.css
 │   │   │   │   │   ├── my-component.html
 │   │   │   │   │   ├── my-component.js
-│   │   │   ├── layouts/			// The primary templates for routes / "pages"
-│   │   │   │   ├── hello-world/	// The hello world example from Knockout
+│   │   │   ├── layouts/             // The primary templates for routes / "pages"
+│   │   │   │   ├── hello-world/     // The hello world example from Knockout
 │   │   │   │   │   ├── hello-world.css
 │   │   │   │   │   ├── hello-world.html
 │   │   │   │   │   ├── hello-world.js
-│   │   │   │   ├── my-page/		// Example page
+│   │   │   │   ├── my-page/         // Example page
 │   │   │   │   │   ├── my-page.css
 │   │   │   │   │   ├── my-page.html
 │   │   │   │   │   ├── my-page.js
-│   ├── less/						// Where the dist minified build lives
-│   │   ├── index.html 				// Minified
-│   │   ├── bundle.css 				// Minified, compiled styles
-│   │   ├── bundle.js 				// Minified, compiled scripts
-│   │   ├── ... etc 				// Copied from the /more/ directory
+│   ├── less/                   // Where the dist minified build lives
+│   │   ├── index.html          // Minified
+│   │   ├── bundle.css          // Minified, compiled styles
+│   │   ├── bundle.js           // Minified, compiled scripts
+│   │   ├── ... etc             // Copied from the /more/ directory
 ```
 
 Most of your work will be happening in /more/ui/ (and some in /more/index.html)
@@ -83,25 +83,25 @@ Most of your work will be happening in /more/ui/ (and some in /more/index.html)
 │   │   ├── components/
 ```
 
-##### index.html
+#### index.html
 * Primary view and layout for your app
 * SEO jargon in <head>
 
-##### app.css
+#### app.css
 * Styles you want to be applied globally
 
-##### app.js
+#### app.js
 * Browserify requires
 * Registrations for your layouts and components
 * Primary view model for your app
 * Director router configuration and initialization
 
-##### layouts/
+#### layouts/
 * Template modules for page layouts (routes)
 * One directory per layout containing a JS, a CSS, and an HTML file for modular development
 * Ex: my-layout/ --> my-layout.js, my-layout.css, my-layout.html (could be accessed from /#/my-layout/)
 
-##### components/
+#### components/
 * Reusable component modules used in layout templates
 * One directory per component containing a JS, a CSS, and an HTML file for modular development
 * Ex: my-component/ --> my-component.js, my-component.css, my-component.html
@@ -114,7 +114,7 @@ To export the View template from that JS file, use Browserify's require() again 
 
 Honestly, you only need to remember 2 npm scripts.
 
-##### dev
+#### dev
 
 `npm run dev`
 
@@ -123,7 +123,7 @@ It uses watchify and catw to actively bundle the js and css whenever changes are
 This will also use live-server to spin up a live-reload server from the /more/ directory and open it in your browser.
 
 
-##### dev
+#### dist
 
 `npm run dist`
 
@@ -149,5 +149,5 @@ For all changes you'll need to make (in regards to sections such as the SEO jarg
 * [html-minifier](https://www.npmjs.com/package/html-minifier/)
 
 ____
-###### Cheers,
+**Cheers,**
 David
